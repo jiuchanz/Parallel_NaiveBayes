@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.6)
+project(NaiveBayes360)
+
+set(CMAKE_CXX_STANDARD 11)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package( Threads )
+
+set(SOURCE_FILES
+        main.cpp
+        bitmap.cpp
+        bitmap.hpp
+        mnist_reader_common.hpp
+        mnist_reader_less.hpp
+        mnist_utils.hpp
+        mnist_reader.hpp)
+
+add_executable(NaiveBayes360 ${SOURCE_FILES})
+target_link_libraries( NaiveBayes360 ${CMAKE_THREAD_LIBS_INIT} )

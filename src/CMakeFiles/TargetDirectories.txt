@@ -1,3 +1,0 @@
-/home/student/ee451/bayesian/project21Student/src/CMakeFiles/rebuild_cache.dir
-/home/student/ee451/bayesian/project21Student/src/CMakeFiles/edit_cache.dir
-/home/student/ee451/bayesian/project21Student/src/CMakeFiles/NaiveBayes360.dir

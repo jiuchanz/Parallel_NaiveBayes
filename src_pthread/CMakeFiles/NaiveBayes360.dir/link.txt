@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall   CMakeFiles/NaiveBayes360.dir/main.cpp.o CMakeFiles/NaiveBayes360.dir/bitmap.cpp.o  -o NaiveBayes360 -lpthread 

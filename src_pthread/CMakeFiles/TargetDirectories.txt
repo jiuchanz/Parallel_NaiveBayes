@@ -1,0 +1,3 @@
+/home/student/ee451/bayesian/Parallel_NaiveBayes/src_pthread/CMakeFiles/rebuild_cache.dir
+/home/student/ee451/bayesian/Parallel_NaiveBayes/src_pthread/CMakeFiles/edit_cache.dir
+/home/student/ee451/bayesian/Parallel_NaiveBayes/src_pthread/CMakeFiles/NaiveBayes360.dir
