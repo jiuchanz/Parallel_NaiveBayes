@@ -1,0 +1,42 @@
+omp version running time in seconds:
+
+1 thread:
+exection time: 0.633277
+test accuracy: 0.8443
+2 threads:
+exection time: 0.348605
+test accuracy: 0.8443
+4 threads:
+exection time: 0.195623
+test accuracy: 0.8442
+8 threads:
+exection time: 0.128587
+test accuracy: 0.8443
+16 threads:
+exection time: 0.0962596
+test accuracy: 0.844
+32 threads:
+exection time: 0.113714
+test accuracy: 0.8442
+
+
+pthread version running time in seconds:
+
+1 thread:
+exection time: 0.545786
+test accuracy: 0.8443
+2 threads:
+exection time: 0.29438
+test accuracy: 0.8443
+4 threads:
+exection time: 0.182501
+test accuracy: 0.8442
+8 threads:
+exection time: 0.132432
+test accuracy: 0.8442
+16 threads:
+exection time: 0.122611
+test accuracy: 0.8431
+32 threads:
+exection time: 0.188276
+test accuracy: 0.836

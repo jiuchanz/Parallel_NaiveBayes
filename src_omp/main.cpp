@@ -64,7 +64,9 @@ int main(int argc, char* argv[]) {
     //train
     vector<double> ProbC(10);
     vector<int> CountC(10);
-    for(int i=0;i<trainLabels.size();i++)
+
+    
+    for(i=0;i<trainLabels.size();i++)
     {
         int label = static_cast<int>(trainLabels[i]);
         CountC[label]++;
@@ -77,9 +79,10 @@ int main(int argc, char* argv[]) {
     }
 
     
-    if( clock_gettime(CLOCK_REALTIME, &start) == -1) { perror("clock gettime");}
+    
     vector<int> temp(numFeatures,0); 
     vector<vector<int>> CountWhite(numLabels,temp); // row is pixel Fj, col is c
+    if( clock_gettime(CLOCK_REALTIME, &start) == -1) { perror("clock gettime");}
 
     #pragma omp parallel shared(trainImages,CountWhite,trainLabels) private(i,j,tid)
     {
@@ -114,7 +117,7 @@ int main(int argc, char* argv[]) {
     myfile.close();
     if( clock_gettime( CLOCK_REALTIME, &stop) == -1 ) { perror("clock gettime");}       
     time = (stop.tv_sec - start.tv_sec)+ (double)(stop.tv_nsec - start.tv_nsec)/1e9;
-    cout<<time<<endl; 
+    cout<<"exection time: "<<time<<endl;  
 
     
     //visualization
@@ -172,6 +175,7 @@ int main(int argc, char* argv[]) {
         myfile<<endl;
     }
     myfile<<((double) countCorrect)/ 10000<<endl;
+    cout<<"test accuracy: "<<((double) countCorrect)/ 10000<<endl;
     myfile.close();
 
 

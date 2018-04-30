@@ -1,0 +1,2 @@
+/var/spool/slurm/slurmd/spool/job222064/slurm_script: line 18:   383 Segmentation fault      (core dumped) ./NaiveBayes360 8
+/var/spool/slurm/slurmd/spool/job222064/slurm_script: line 20:   400 Segmentation fault      (core dumped) ./NaiveBayes360 16

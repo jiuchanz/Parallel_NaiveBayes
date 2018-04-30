@@ -5,9 +5,12 @@ ADD_DEFINITIONS(
     -std=c++11 # Or -std=c++0x
     # Other flags
 )
-find_package( Threads )
-
-
+find_package(MPI REQUIRED)
+if (MPI_FOUND)
+    include_directories(SYSTEM ${MPI_INCLUDE_PATH})
+else (MPI_FOUND)
+    message(SEND_ERROR "This application cannot compile without MPI")
+endif (MPI_FOUND)
 set(SOURCE_FILES
         main.cpp
         bitmap.cpp
@@ -18,4 +21,5 @@ set(SOURCE_FILES
         mnist_reader.hpp)
 
 add_executable(NaiveBayes360 ${SOURCE_FILES})
-target_link_libraries(NaiveBayes360 ${CMAKE_THREAD_LIBS_INIT} )
+target_link_libraries(NaiveBayes360 ${MPI_LIBRARIES})
+

@@ -159,7 +159,7 @@ int main(int argc, char* argv[]) {
 
     if( clock_gettime( CLOCK_REALTIME, &stop) == -1 ) { perror("clock gettime");}       
     time = (stop.tv_sec - start.tv_sec)+ (double)(stop.tv_nsec - start.tv_nsec)/1e9;
-    cout<<time<<endl; 
+    cout<<"exection time: "<<time<<endl;  
     
 
     //visualization
@@ -213,6 +213,7 @@ int main(int argc, char* argv[]) {
         myfile<<endl;
     }
     myfile<<((double) countCorrect)/ 10000<<endl;
+    cout<<"test accuracy: "<<((double) countCorrect)/ 10000<<endl;
     myfile.close();
 
 
